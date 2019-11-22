@@ -1,11 +1,18 @@
 import React from 'react';
-import Rooms from './components/Rooms';
+
+import { Route, Switch } from 'react-router-dom';
+
+import Client from './components/Client'
+import Home from './components/Home';
+
+
 
 function App() {
   return (
-    <div>
-      <Rooms />
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/clients/:id" component={Client} /> 
+    </Switch>
   );
 }
 

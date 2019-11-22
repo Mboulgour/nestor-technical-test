@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
@@ -49,9 +50,9 @@ const Rooms = () => {
                   {clients.filter(client => client.roomId === room.id).length > 0 
                     ?
                     clients.filter(client => client.roomId === room.id).map(client => 
-                      <div className="room__card_user">
+                      <Link to={`/clients/${client.id}`} className="room__card_user">
                         {client.name}
-                      </div> 
+                      </Link> 
                       )
                     : 
                     null

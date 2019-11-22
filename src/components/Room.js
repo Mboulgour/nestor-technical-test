@@ -60,8 +60,10 @@ const Room = props => {
           </div>
         </div>
         <div className="room__photograph">
+          Picture 1
         </div>
         <div className="room__photograph">
+          Picture 2
         </div>
       </div>
     </div>

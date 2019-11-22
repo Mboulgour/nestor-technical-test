@@ -87,9 +87,11 @@ span.room__picture{
   border: 5px solid $main-color;
   border-radius: 10px;
   background: #1c2b4a99;
-  height: 600px;
+  color: $main-color;
+  height: 700px;
   width: 80%;
   margin-top: 100px;
+  padding: 50px;
 }
 
 @media screen and (max-width: 1340px) { 
@@ -122,6 +124,10 @@ span.room__picture{
 
   .room__info, .room__client_info{
     font-size: 1em;
+  }
+
+  .room__photograph{
+    height: 300px;
   }
 }
 

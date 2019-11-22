@@ -19,7 +19,7 @@ https://nestor-rooms-mrios.netlify.com
 - **Commenter le code**
 
 ## Bugs au déploiement
-- Corriger les problèmes de fetch sur les composant `Room` et `Client`
+- Corriger/optimiser le fetch sur les composant `Room` et `Client`
 - Ajouter des variables pour les associations Rooms-Clients et inversement
 
 

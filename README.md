@@ -16,3 +16,6 @@ https://nestor-rooms-mrios.netlify.com
 - Ajouter un filtre par ville sur le composant `Rooms`
 - Rendre le style plus _responsive_
 - Refactoriser les répétitions de code
+- *Commenter le code*
+
+

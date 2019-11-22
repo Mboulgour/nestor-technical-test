@@ -6,3 +6,7 @@
 - node-sass
 - react-fontawesome
 
+## Déploiement :
+
+nestor-rooms-mrios.netlify.com
+

@@ -114,3 +114,13 @@ h1.room__city__name{
   font-size: .8em;
   padding: 10px 15px;
 }
+
+@media screen and (max-width: 500px){
+  .room__card{
+    font-size: 1em;
+  }
+
+  .room__card_user, .room__card_status{
+    font-size: .6em;
+  }
+}

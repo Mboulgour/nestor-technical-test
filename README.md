@@ -12,6 +12,7 @@ https://nestor-rooms-mrios.netlify.com
 
 ## Axes d'amélioration :
 
+- **Régler le problème des en têtes _CORS_**
 - Implémenter des tests
 - Ajouter un filtre par ville sur le composant `Rooms`
 - Rendre le style plus _responsive_

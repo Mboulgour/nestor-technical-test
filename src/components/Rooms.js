@@ -17,22 +17,21 @@ const Rooms = () => {
   const distinctCities = [...new Set(rooms.map(room => room.city))];
 
   return(
-    <>
+    <div className="room__container">
       {distinctCities.map(city => (
-        <div>
-          <h1>{city}</h1>
+        <div classname='room__city_container'>
+          <h1 className="room__city__name">{city}</h1>
           {rooms.filter(r => city === r.city).map(room =>(
-            <div>
-              <h2>{room.name}</h2>
-              <p>{room.address}</p>
-              <p>{room.address}</p>
-              <p>{room.zip}</p>
-              <p>{room.status}</p>
+            <div className="room__card" key={room.id}>
+              <div>{room.name}</div>
+              <div>{room.address}</div>
+              <div>{room.zip}</div>
+              <div>{room.status}</div>
             </div>
           ))}
         </div>
       ))}
-    </>
+    </div>
   )
 }
 

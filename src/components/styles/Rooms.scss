@@ -1,3 +1,27 @@
-h1{
-  font-size: 2em;
+@mixin flexBox($direction, $justify, $align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+$main-color: #1c2b4a;
+$secondary-color: #3cc4b6;
+
+.room__container{
+  @include flexBox(column, flex-start, center);
+}
+
+.room__city_container{
+  width: 100%;
+}
+
+h1.room__city__name{
+  font-size: 3em;
+  margin: 25px;
+  background:#1c2b4a;
+  text-transform: capitalize;
+  text-align: left;
+  color:white;
+  padding: 15px;
 }

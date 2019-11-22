@@ -14,6 +14,7 @@ const Client = props =>{
   let params_id = match.params.id;
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchClient = () => {
       fetch(`https://technical-test-api.herokuapp.com/clients/${params_id}`)
       .then(results => results.json())

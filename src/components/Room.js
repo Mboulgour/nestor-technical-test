@@ -16,6 +16,7 @@ const Room = props => {
   const [client, setClient] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchRoom = () => {
       fetch(`https://technical-test-api.herokuapp.com/rooms/${room_id}`)
       .then(results => results.json())

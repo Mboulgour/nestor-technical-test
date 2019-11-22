@@ -1,0 +1,116 @@
+@mixin flexBox($direction, $justify, $align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+$main-color: #1c2b4a;
+$secondary-color: #3cc4b6;
+
+.room__container{
+  @include flexBox(column, flex-start, center);
+}
+
+.room__city_container{
+  width: 100%;
+}
+
+h1.room__city__name{
+  font-size: 3em;
+  margin: 25px;
+  background:#1c2b4a;
+  text-transform: capitalize;
+  text-align: left;
+  color:white;
+  padding: 15px;
+}
+
+.room__cards{
+  @include flexBox(row, center, center);
+  flex-wrap: wrap;
+  margin: 25px;
+}
+
+.room__card{
+  width: 600px;
+  height: 200px;
+  border: 2px solid $main-color;
+  border-radius: 10px;
+  margin: 25px 25px;
+  font-size: 1.5em;
+}
+
+.room__card_header{
+  @include flexBox(row, flex-start, flex-start);
+  background: white;
+  color: $main-color;
+  padding: 15px;
+  border-radius: inherit;
+  svg{
+    font-size: 4em;
+    padding: 15px;
+    border: solid 2px $main-color;
+    border-radius: 10px;
+  }
+  .room__card_props{
+    @include flexBox(column, flex-start, flex-start);
+    margin-left: 15px;
+
+    span.room__card_props--address{
+      font-size: 1.2em;
+      border-bottom: 1px dashed $main-color;
+      padding-bottom: 10px;
+      font-weight: bold;
+      &:hover{
+        cursor: pointer;
+        opacity: .8;
+      }
+      svg{
+        padding: 0;
+        margin-left: 15px;
+        font-size: 1em;
+        border: 0;
+      }
+    }
+
+    span.room__card_props--name{
+      margin-top: 10px;
+      font-size: 0.7em;
+      color: $secondary-color;
+    }
+  }
+}
+
+.room__card_body{
+  @include flexBox(row, flex-start, center);
+}
+
+.room__card_status{
+  @include flexBox(row, flex-start, center);
+  padding: 15px;
+}
+
+.room__status_badge{
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  margin-right: 10px;
+  &.room__status--occupied{
+    background: #ff3333;
+  }
+  &.room__status--available{
+    background: #80ff80;
+  }
+}
+
+.room__card_user{
+  border: 2px solid $secondary-color;
+  font-weight: bold;
+  border-radius: 10px;
+  color: $secondary-color;
+  margin: 0 15px 0 auto;
+  font-size: .8em;
+  padding: 10px 15px;
+}

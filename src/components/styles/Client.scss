@@ -1,0 +1,140 @@
+@mixin flexBox($direction, $justify, $align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: wrap;
+}
+
+$main-color: #1c2b4a;
+$secondary-color: #3cc4b6;
+
+.client__container{
+  text-align: center;
+}
+
+.client__header{
+  @include flexBox(row, flex-start, center);
+  width: 100%;
+  background: $main-color;
+  color: white;
+}
+
+h1.client__name{
+  font-size: 5em;
+  font-weight: bold;
+  margin: 25px;
+  text-transform: capitalize;
+  text-align: left;
+  padding: 15px;
+  overflow: hidden;
+}
+
+span.client__picture{
+  margin: 25px 45px 25px auto;
+  font-size: 6em;
+  padding: 35px;
+  border: solid 2px white;
+  border-radius: 10px;
+}
+
+.client__body{
+  @include flexBox(row, flex-start, center);
+  margin: 25px;
+}
+
+.client__infos{
+  @include flexBox(column, center, flex-start);
+  width: 50%;
+}
+
+.client__info{
+  @include flexBox(row, flex-start, center);
+  font-size: 2em;
+  margin: 25px;
+  color: $main-color;
+  span{
+    background: $main-color;
+    padding: 15px;
+    margin-right: 15px;
+    color: white;
+  }
+}
+
+.client__room_infos{
+  @include flexBox(column, flex-start, flex-start);
+  width: 50%;
+  height: 100%;
+  background: $main-color;
+  color: white;
+  border-radius: 5px;
+}
+
+.client__room_info{
+  @include flexBox(row, flex-start, center);
+  font-size: 2em;
+  margin: 25px;
+  color: white;
+  text-transform: capitalize;
+  span{
+    padding: 15px;
+    margin-right: 15px;
+    background: white;
+    color: $main-color;
+  }
+}
+
+.client__room_info--title{
+  margin: 25px;
+  font-size: 2.5em;
+  font-weight: bold;
+  a{
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    &:hover{
+      opacity: .8;
+      cursor: pointer;
+    }
+  }
+}
+
+// @media screen and (max-width: 1024px) { 
+
+//  } 
+
+@media screen and (max-width: 1340px) { 
+  .client__body{
+    flex-direction: column;
+  }
+
+  .client__infos{
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .client__room_infos{
+    justify-content: flex-start;
+    width: 100%;
+  }
+} 
+
+@media screen and (max-width: 1100px) { 
+  span.client__picture{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px){
+  h1.client__name{
+    font-size: 3em;
+  }
+
+  .client__info, .client__room_info{
+    font-size: 1em;
+  }
+}
+
+
+

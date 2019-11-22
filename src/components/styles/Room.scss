@@ -1,0 +1,129 @@
+@mixin flexBox($direction, $justify, $align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+$main-color: #1c2b4a;
+$secondary-color: #3cc4b6;
+
+
+.room__header{
+  @include flexBox(row, flex-start, center);
+  width: 100%;
+  background: $main-color;
+  color: white;
+}
+
+h1.room__name{
+  font-size: 5em;
+  font-weight: bold;
+  margin: 25px;
+  text-transform: capitalize;
+  text-align: left;
+  padding: 15px;
+  overflow: hidden;
+}
+
+span.room__picture{
+  margin: 25px 45px 25px auto;
+  font-size: 6em;
+  padding: 35px;
+  border: solid 2px white;
+  border-radius: 10px;
+}
+
+.room__body{
+  @include flexBox(column, center, center);
+  margin: 25px;
+  width: 100%;
+}
+
+.room__client_infos{
+  @include flexBox(column, center, center);
+  flex-wrap: wrap;
+  width: inherit;
+  color: $main-color;
+  border-radius: 5px;
+}
+
+.room__client_info{
+  @include flexBox(row, flex-start, center);
+  font-size: 2em;
+  margin: 25px;
+  color: $main-color;
+  text-transform: capitalize;
+  overflow: hidden;
+  a{ 
+    overflow: hidden;
+    text-decoration: underline;
+  }
+  span{
+    padding: 15px;
+    font-weight: bold;
+    margin-right: 15px;
+    color: $main-color;
+  }
+}
+
+.room__client_info--title{
+  margin: 25px;
+  font-size: 2.5em;
+  font-weight: bold;
+  a{
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    &:hover{
+      opacity: .8;
+      cursor: pointer;
+    }
+  }
+}
+
+.room__photograph{
+  width: 100%;
+  border: 5px solid $main-color;
+  border-radius: 10px;
+  background: #1c2b4a99;
+  height: 600px;
+  width: 80%;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1340px) { 
+  .room__body{
+    flex-direction: column;
+  }
+
+  .room__infos{
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .room__client_infos{
+    justify-content: flex-start;
+    width: 100%;
+  }
+} 
+
+@media screen and (max-width: 1100px) { 
+  span.room__picture{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px){
+  h1.room__name{
+    font-size: 3em;
+  }
+
+  .room__info, .room__client_info{
+    font-size: 1em;
+  }
+}
+
+
+

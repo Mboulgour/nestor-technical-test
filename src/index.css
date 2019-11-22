@@ -8,7 +8,8 @@
 	font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
 }
 
 article, aside, details, figcaption, figure, 
@@ -37,4 +38,9 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
 }

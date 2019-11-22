@@ -38,7 +38,7 @@ const Rooms = () => {
                 <div className="room__card_header">
                   <FontAwesomeIcon icon={faHome} />
                   <div className="room__card_props">
-                    <span className="room__card_props--address">{room.address}, {room.zip}</span>
+                    <span className="room__card_props--address"><Link to ={`rooms/${room.id}`}>{room.address}, {room.zip}</Link></span>
                     <span className="room__card_props--name">{room.name}</span>
                   </div>
                 </div>
